@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-func Benchmark_scan(b *testing.B) {
+func Benchmark_xmas(b *testing.B) {
 	content, err := os.ReadFile("test-data")
 	if err != nil {
 		log.Fatal(err)
@@ -20,6 +20,6 @@ func Benchmark_scan(b *testing.B) {
 	}
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		scan(characters)
+		xmas(characters)
 	}
 }

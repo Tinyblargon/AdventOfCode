@@ -21,7 +21,7 @@ func main() {
 		runes := []rune(line)
 		characters = append(characters, runes)
 	}
-	fmt.Println(scan(characters))
+	fmt.Println(xmas(characters))
 }
 
 const (
@@ -36,7 +36,7 @@ const (
 	S rune = 83
 )
 
-func scan(characters [][]rune) (amount uint) {
+func xmas(characters [][]rune) (amount uint) {
 	for vertical := range characters {
 		for horizontal := range characters[vertical] {
 			if (characters)[vertical][horizontal] != X {
